@@ -5,9 +5,15 @@ const cors = require('cors');
 const port = process.env.PORT || 8000;
 const passport = require('passport');
 
+// Middleware
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+// Passport Middleware
+app.use(passport.initialize());
+// Importing Passport file into server
+require('./config/passport')(passport);
 
 app.get('/', (req, res) => {
 	res
