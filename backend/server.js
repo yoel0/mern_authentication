@@ -5,6 +5,8 @@ const cors = require('cors');
 const port = process.env.PORT || 8000;
 const passport = require('passport');
 
+const users = require('./routes/api/users');
+
 // Middleware
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +22,8 @@ app.get('/', (req, res) => {
 		.status(200)
 		.json({ message: 'Smile, you are being watched by the Backend Team' });
 });
+
+app.use('/api/users', users);
 
 app.listen(port, () => {
 	console.log(`Server is running on port: ${port}`);
