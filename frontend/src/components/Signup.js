@@ -75,7 +75,7 @@ const Signup = () => {
 								onChange={handlePassword}
 								className='form-control'
 							/>
-							<label htmlFor='confirmPassword'>Password</label>
+							<label htmlFor='confirmPassword'>Confirm Password</label>
 							<input
 								type='password'
 								name='confirmPassword'

@@ -4,7 +4,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import Signup from './components/Signup';
 import Login from './components/Login';
-// import Profile from './components/Profile';
+import Profile from './components/Profile';
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import About from './components/About';
@@ -79,11 +79,11 @@ function App() {
 						)}
 					/>
 					<Route path='/about' cmponent={About} />
-					{/* <PrivateRoute
+					<PrivateRoute
 						path='/profile'
 						component={Profile}
 						user={currentUser}
-					/> */}
+					/>
 					<Route exact path='/' component={Welcome} />
 				</Switch>
 			</div>
