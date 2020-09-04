@@ -3,8 +3,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import Signup from './components/Signup';
-import Login from './components/Login';
-import Profile from './components/Profile';
+// import Login from './components/Login';
+// import Profile from './components/Profile';
 import Navbar from './components/Navbar';
 import Welcome from './components/Welcome';
 import About from './components/About';
@@ -67,7 +67,7 @@ function App() {
 			<div className='container mt-5'>
 				<Switch>
 					<Route path='/signup' component={Signup} />
-					<Route
+					{/* <Route
 						path='/login'
 						render={props => (
 							<Login
@@ -77,13 +77,13 @@ function App() {
 								user={currentUser}
 							/>
 						)}
-					/>
+					/> */}
 					<Route path='/about' cmponent={About} />
-					<PrivateRoute
+					{/* <PrivateRoute
 						path='/profile'
 						component={Profile}
 						user={currentUser}
-					/>
+					/> */}
 					<Route exact path='/' component={Welcome} />
 				</Switch>
 			</div>
